@@ -46,6 +46,7 @@ public class Application {
 
         //create a panel for the buttons
         JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.PAGE_AXIS));
 
         //create an instance of your processing applet
         final MyApplet applet = new MyApplet();
@@ -57,6 +58,12 @@ public class Application {
         //Buttons
         //create a button labled "create new ball"
         JButton buttonCreate = new JButton("create new ball");
+
+        JButton btnTest = new JButton("Test");
+
+
+
+
         //assing a tooltip
         buttonCreate.setToolTipText("creates a new ball ");
         //give a name for the command
@@ -104,6 +111,7 @@ public class Application {
         //store the two buttons in the button panel
         buttonPanel.add(buttonCreate);
         buttonPanel.add(buttonLoad);
+        buttonPanel.add(btnTest);
 
         //store the applet in panel
         panel.add(applet);
